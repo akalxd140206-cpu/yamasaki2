@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>自治体・公共施設向けLP</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #92b6d1;
+    --text: #5c544d;
+    --radius: 20px;
+}
+
+* { box-sizing: border-box; margin:0; padding:0; }
+
+body {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: var(--text);
+    background:#fffdfb;
+}
+
+/* ===== ヘッダー ===== */
+.site-header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+}
+
+.logo { font-weight: bold; }
+
+.h-center {
+    display: flex;
+    gap: 8px;
+}
+
+.cat-btn {
+    font-size: 12px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: var(--primary);
+    color: #fff;
+}
+
+/* ハンバーガー */
+.menu-btn {
+    display: none;
+    cursor: pointer;
+}
+.menu-btn div {
+    width: 22px;
+    height: 2px;
+    background: #333;
+    margin: 4px 0;
+}
+
+/* SPメニュー */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+.mobile-menu.active { display:flex; }
+
+.mobile-menu span {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+/* ===== 共通 ===== */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.section { padding: 60px 0; }
+
+.title {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* ===== MV ===== */
+.mv {
+    background: #f0f0f0;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.mv p {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* ===== 2カラム ===== */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    background: #ddd;
+    border-radius: var(--radius);
+}
+
+/* ===== CTA ===== */
+.cta {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.btn-main {
+    background: var(--primary);
+    color: #fff;
+}
+
+.btn-sub {
+    background: #eee;
+}
+
+/* ===== 商品 ===== */
+.products {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+.product {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.product img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ===== カード ===== */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* ===== SP ===== */
+@media(max-width:768px){
+
+.h-center { display:none; }
+
+.menu-btn { display:block; }
+
+.grid {
+    grid-template-columns:1fr;
+}
+
+.products {
+    grid-template-columns:1fr 1fr;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== ヘッダー ===== -->
+<header class="site-header">
+<div class="header-inner">
+
+<div class="menu-btn" id="menuBtn">
+<div></div><div></div><div></div>
+</div>
+
+<div class="logo">YAMASAKI</div>
+
+<nav class="h-center">
+<span class="cat-btn">ベビーベッド</span>
+<span class="cat-btn">ジュニアベッド</span>
+<span class="cat-btn">おむつ交換台</span>
+<span class="cat-btn">最高級品</span>
+<span class="cat-btn">産院向け</span>
+</nav>
+
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+<span>ベビーベッド</span>
+<span>ジュニアベッド</span>
+<span>おむつ交換台</span>
+<span>最高級品</span>
+<span>産院向け</span>
+</div>
+
+</header>
+
+<div class="container">
+
+<!-- ===== MV ===== -->
+<section class="mv">
+<h2>自治体・公共施設向け<br>導入相談・見積・設置まで対応</h2>
+<p>
+子育て窓口・保健センター・児童館などに対応
+</p>
+</section>
+
+<!-- ===== 説明 ===== -->
+<div class="grid">
+<div>
+<p>
+国内自社生産のベビーベッドメーカーとして、
+素材選定から製造工程まで管理しています。
+</p>
+</div>
+<img class="img" src="https://picsum.photos/500/300">
+</div>
+
+<!-- ===== CTA ===== -->
+<div class="cta">
+<a class="btn btn-main">お見積・導入相談</a>
+<a class="btn btn-sub">お問い合わせ</a>
+</div>
+
+<!-- ===== 商品 ===== -->
+<section class="section">
+<h2 class="title">製品ラインナップ</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://picsum.photos/200">
+<p>ハイタイプベッド</p>
+</div>
+
+<div class="product">
+<img src="https://picsum.photos/201">
+<p>おむつ交換台</p>
+</div>
+
+<div class="product">
+<img src="https://picsum.photos/202">
+<p>スタンドタイプ</p>
+</div>
+
+<div class="product">
+<img src="https://picsum.photos/203">
+<p>サポートチェア</p>
+</div>
+
+</div>
+</section>
+
+<!-- ===== Flow ===== -->
+<section class="section">
+<h2 class="title">導入までの流れ</h2>
+
+<div class="grid">
+<div class="card">お問い合わせ</div>
+<div class="card">お見積り</div>
+<div class="card">導入・設置</div>
+</div>
+
+</section>
+
+<!-- ===== CTA 下 ===== -->
+<div class="cta">
+<a class="btn btn-main">お見積・導入相談</a>
+</div>
+
+<!-- ===== フォーム ===== -->
+<section class="section">
+<h2 class="title">お問い合わせ</h2>
+
+<div class="card">
+<input placeholder="組織名"><br><br>
+<input placeholder="担当者名"><br><br>
+<input placeholder="メールアドレス"><br><br>
+<input placeholder="電話番号"><br><br>
+<button class="btn btn-main">送信</button>
+</div>
+
+</section>
+
+</div>
+
+<script>
+const btn = document.getElementById("menuBtn");
+const menu = document.getElementById("mobileMenu");
+
+btn.addEventListener("click", ()=>{
+    menu.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
